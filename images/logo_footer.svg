@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="211" height="52" viewBox="0 0 211 52">
+  <g id="logo_footer" transform="translate(-164 -72)">
+    <text id="Mr.landry" transform="translate(220 115)" fill="#fef7f1" font-size="44" font-family="BigShouldersText-SemiBold, Big Shoulders Text" font-weight="600"><tspan x="0" y="0">Mr.Landry</tspan></text>
+    <g id="Groupe_3" data-name="Groupe 3" transform="translate(164 79.219)">
+      <path id="Tracé_1" data-name="Tracé 1" d="M5.414,0h37.9a5.414,5.414,0,0,1,5.414,5.414V30.68a5.414,5.414,0,0,1-5.414,5.414H5.414A5.414,5.414,0,0,1,0,30.68V5.414A5.414,5.414,0,0,1,5.414,0Z" transform="translate(0 1.805)" fill="#1b1b1b"/>
+      <g id="Groupe_2" data-name="Groupe 2" transform="translate(1.805)">
+        <path id="Tracé_1-2" data-name="Tracé 1" d="M5.414,0h37.9a5.414,5.414,0,0,1,5.414,5.414V30.68a5.414,5.414,0,0,1-5.414,5.414H5.414A5.414,5.414,0,0,1,0,30.68V5.414A5.414,5.414,0,0,1,5.414,0Z" fill="#db3333"/>
+        <path id="Polygone_1" data-name="Polygone 1" d="M10,0,20,17H0Z" transform="translate(34.195 8.781) rotate(90)" fill="#fef7f1"/>
+      </g>
+    </g>
+  </g>
+</svg>
