@@ -17,6 +17,14 @@
       
     }
   
+    @media  all and (max-height:  700px) {
+      // height: auto;
+      // padding-top: 10vh;
+      // padding-bottom: 20vh;
+      height: calc(700px - var(--header_h) - 60px);
+      
+    }
+  
   
   
   

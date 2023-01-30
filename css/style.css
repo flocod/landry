@@ -1412,6 +1412,11 @@ a :hover {
     height: calc(100vh - var(--header_h) - 60px);
   }
 }
+@media all and (max-height: 700px) {
+  .carousel {
+    height: calc(700px - var(--header_h) - 60px);
+  }
+}
 .carousel .tree {
   position: absolute;
   bottom: 0px;
