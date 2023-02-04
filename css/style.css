@@ -115,6 +115,11 @@ Black 900
   color: var(--fond);
 }
 
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*** scroollbar ***/
 *::-webkit-scrollbar {
   width: 0px;
@@ -239,6 +244,7 @@ a :hover {
 .header .struct .logo {
   display: block;
   width: 150px;
+  cursor: pointer;
 }
 @media all and (max-width: 1000px) {
   .header .struct .logo {
@@ -602,15 +608,22 @@ a :hover {
   background: linear-gradient(to top, rgba(173, 32, 32, 0) 33%, var(--fondlow) 50%, rgba(173, 32, 32, 0) 33%);
 }
 .services .service_container__struct {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media all and (max-width: 1600px) {
+  .services .service_container__struct {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 .services .service_container__struct .service {
   width: 311px;
@@ -641,9 +654,24 @@ a :hover {
   margin-bottom: 20px;
   margin-left: 30px;
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1600px) {
   .services .service_container__struct .service {
-    margin-left: 15px;
+    margin-left: 0px;
+  }
+}
+@media all and (max-width: 1450px) {
+  .services .service_container__struct .service {
+    width: 30%;
+  }
+}
+@media all and (max-width: 1030px) {
+  .services .service_container__struct .service {
+    width: 48%;
+  }
+}
+@media all and (max-width: 630px) {
+  .services .service_container__struct .service {
+    width: 100%;
   }
 }
 .services .service_container__struct .service:first-child {
@@ -697,10 +725,14 @@ a :hover {
 .services .service_container__struct .service:nth-child(2n) .service__btn {
   color: var(--slice_color) !important;
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1600px) {
   .services .service_container__struct .service:nth-child(2n) {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+@media all and (max-width: 1000px) {
+  .services .service_container__struct .service:nth-child(2n) {
     margin-bottom: 0px;
   }
 }
@@ -876,7 +908,7 @@ a :hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-bottom: 130px;
+  margin-bottom: 150px;
 }
 @media all and (max-width: 1000px) {
   .full_service .services_list .service_define {
@@ -884,7 +916,7 @@ a :hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
   .full_service .services_list .service_define .service_define__details {
     margin-bottom: 30px;
@@ -1182,6 +1214,7 @@ a :hover {
 }
 .footer__struct .item .footer_logo {
   width: 150px;
+  cursor: pointer;
 }
 @media all and (max-width: 1000px) {
   .footer__struct .item .footer_logo {
@@ -1195,6 +1228,7 @@ a :hover {
 .footer__struct .item .contacts .contact {
   font-size: 2em;
   margin-bottom: 10px;
+  display: block;
 }
 @media all and (max-width: 1000px) {
   .footer__struct .item .contacts .contact {
@@ -1270,6 +1304,217 @@ a :hover {
   font: normal normal medium 1.5em var(--noto);
   line-height: 1.2em;
   opacity: 0.7;
+}
+
+.box_form {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.8901960784);
+  position: fixed;
+  z-index: 888;
+}
+.box_form .formulaire {
+  width: 80%;
+  height: auto;
+  position: relative;
+  background: var(--text);
+  margin-top: calc(var(--header_h) + 50px);
+  padding-bottom: var(--header_h);
+  -webkit-box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.7294117647);
+          box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.7294117647);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media all and (max-width: 1400px) {
+  .box_form .formulaire {
+    width: 95%;
+  }
+}
+.box_form .formulaire__struct {
+  margin-top: var(--header_h);
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.box_form .formulaire__struct__description {
+  width: 48%;
+}
+@media all and (max-width: 1200px) {
+  .box_form .formulaire__struct__description {
+    display: none;
+  }
+}
+.box_form .formulaire__struct__description .title {
+  display: inline-block;
+  font-size: 3.5em;
+  font-family: var(--big0);
+  color: var(--fond);
+  position: relative;
+}
+.box_form .formulaire__struct__description .title::after {
+  position: absolute;
+  bottom: -20px;
+  height: 6px;
+  left: 0px;
+  background: var(--fond);
+  content: " ";
+  width: 50%;
+}
+.box_form .formulaire__struct__description .description {
+  display: block;
+  margin-top: 70px;
+  line-height: normal;
+  color: var(--fond);
+  opacity: 0.7;
+}
+.box_form .formulaire__struct__form {
+  display: block;
+  width: 48%;
+  border-left: 3px solid var(--fond);
+  padding-left: 70px;
+  margin-left: 70px;
+}
+@media all and (max-width: 1200px) {
+  .box_form .formulaire__struct__form {
+    width: 100%;
+    border-left: none;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+}
+.box_form .formulaire__struct__form .info_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.box_form .formulaire__struct__form .info_title .ico {
+  margin-right: 10px;
+  font-size: 1.2em;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  border-radius: 50%;
+  background: var(--cta);
+  color: var(--fond);
+}
+@media all and (max-width: 1000px) {
+  .box_form .formulaire__struct__form .info_title .ico {
+    height: 30px;
+    font-size: 1em;
+    width: 30px;
+  }
+}
+.box_form .formulaire__struct__form .info_title .text {
+  font-size: 1.5em;
+  color: var(--fond);
+}
+@media all and (max-width: 1000px) {
+  .box_form .formulaire__struct__form .info_title .text {
+    font-size: 1em;
+  }
+}
+.box_form .formulaire__struct__form .form_contain {
+  margin-top: 50px;
+}
+.box_form .formulaire__struct__form .form_contain input, .box_form .formulaire__struct__form .form_contain select, .box_form .formulaire__struct__form .form_contain textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+  font-family: var(--noto);
+  margin-bottom: 30px;
+  background: none;
+  border: none;
+  color: var(--fond);
+  border-bottom: 2px solid var(--fond);
+  padding-bottom: 15px;
+}
+@media all and (max-width: 1000px) {
+  .box_form .formulaire__struct__form .form_contain input, .box_form .formulaire__struct__form .form_contain select, .box_form .formulaire__struct__form .form_contain textarea {
+    font-size: 1em;
+  }
+}
+.box_form .formulaire__struct__form .form_contain input option, .box_form .formulaire__struct__form .form_contain select option, .box_form .formulaire__struct__form .form_contain textarea option {
+  color: var(--text);
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.box_form .formulaire__struct__form .form_contain input option::hover, .box_form .formulaire__struct__form .form_contain select option::hover, .box_form .formulaire__struct__form .form_contain textarea option::hover {
+  color: var(--fond);
+  background-color: var(--text);
+}
+.box_form .formulaire__struct__form .form_contain input input:invalid, .box_form .formulaire__struct__form .form_contain select input:invalid, .box_form .formulaire__struct__form .form_contain textarea input:invalid {
+  border: 2px dashed red;
+}
+.box_form .formulaire__struct__form .form_contain input input:valid, .box_form .formulaire__struct__form .form_contain select input:valid, .box_form .formulaire__struct__form .form_contain textarea input:valid {
+  border: none;
+  border-bottom: 2px solid var(--fond);
+}
+.box_form .formulaire__struct__form .form_contain textarea {
+  height: 80px;
+}
+.box_form .formulaire__struct__form .form_contain .btn_contain .btn_gen {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: var(--fond);
+  -webkit-box-shadow: 3px 3px 0px var(--cta);
+          box-shadow: 3px 3px 0px var(--cta);
+  color: var(--text);
+  border-color: var(--cta);
+}
+.box_form .formulaire__close {
+  display: block;
+  color: var(--fond) !important;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5em;
+  z-index: 10;
+  cursor: pointer;
+}
+@media all and (max-width: 1000px) {
+  .box_form .formulaire__close {
+    top: 10px;
+    right: 10px;
+    font-size: 1.3em;
+  }
 }
 
 /* ------------------------- Grain -------------------------------------------------- */
@@ -1631,17 +1876,12 @@ a :hover {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    width: 110%;
+    width: 80%;
   }
 }
 @media all and (max-width: 1600px) and (min-height: 900px) {
   .carousel__struct__image .image img {
     width: 90%;
-  }
-}
-@media all and (max-width: 1400px) {
-  .carousel__struct__image .image img {
-    width: 150%;
   }
 }
 @media all and (max-width: 1400px) and (min-height < 900px) {
@@ -1651,6 +1891,6 @@ a :hover {
 }
 @media all and (max-width: 1300px) {
   .carousel__struct__image .image img {
-    width: 120%;
+    width: 100%;
   }
 }

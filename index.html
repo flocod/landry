@@ -93,22 +93,23 @@
         <div class="CONTAINER">
           <!-- write you code here -->
 
+          <div id="HOME" class="anchorElem"></div>
           <header class="header">
             <div class="struct">
-              <div class="logo">
+              <div class="logo goo" to="#HOME">
                 <img src="images/logo.png" alt="logo Mr Landry" />
               </div>
 
               <nav id="menu">
                 <ul>
-                  <li class="active">Acceuil</li>
-                  <li>Propos</li>
-                  <li>Services</li>
-                  <li>Contacts</li>
+                  <li class="active goo" to="#HOME">Acceuil</li>
+                  <li class="goo" to="#SERVICES">Services</li>
+                  <li class="goo" to="#PROPOS">Propos</li>
+                  <li class="goo" to="#CONTACTS">Contacts</li>
                 </ul>
               </nav>
 
-              <div class="btn_gen">Get Started</div>
+              <div class="btn_gen commencer">Commençons</div>
             </div>
           </header>
 
@@ -116,8 +117,8 @@
             <div class="carousel__struct">
               <div class="carousel__struct__text">
                 <div class="text1">
-                  I am mr. Landry <br />
-                  <span>A Youtuber</span>
+                  Mr. Landry <br />
+                  <span>YouTubeur</span>
                 </div>
                 <div class="text2">
                   Mon objectif avec cette chaîne YouTube est de vous aider à
@@ -128,26 +129,38 @@
                 </div>
 
                 <div class="btn_container">
-                  <div class="btn_gen">Get Started</div>
-                  <div class="btn_gen btn_gen_2">Get Started</div>
+                  <div class="btn_gen commencer">Commençons</div>
+                  <div to="#PROPOS" class="btn_gen btn_gen_2 goo">A Propos</div>
                 </div>
 
                 <div class="social_link">
-                  <div class="title">FOLLOW ME HERE</div>
+                  <div class="title">SUIVEZ MOI ICI</div>
                   <div class="links">
-                    <a href="#" class="link">
+                    <a
+                      href="https://www.youtube.com/@MonsieurLANDRY1"
+                      target="_blank"
+                      class="link"
+                    >
                       <i class="fab fa-youtube"></i>
                     </a>
-                    <a href="#" class="link">
+                    <a
+                      href="https://www.instagram.com/mr.landryy/"
+                      target="_blank"
+                      class="link"
+                    >
                       <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="link">
+                    <!-- <a href="#" target="_blank" class="link">
                       <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="link">
+                    <a href="#" target="_blank" class="link">
                       <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="#" class="link">
+                    </a> -->
+                    <a
+                      href="https://web.facebook.com/landry.btjl"
+                      target="_blank"
+                      class="link"
+                    >
                       <i class="fab fa-facebook"></i>
                     </a>
                   </div>
@@ -177,7 +190,7 @@
             />
           </div>
 
-          <section class="group">
+          <section id="PROPOS" class="group anchorElem">
             <div class="group__struct">
               <div class="about">
                 <div class="about__image">
@@ -235,11 +248,11 @@
             </div>
           </section>
 
-          <section class="group">
+          <section id="SERVICES" class="group anchorElem">
             <div class="group__struct">
               <div class="services">
                 <div class="services__title">
-                  <div class="biggest_text">WHAT I OFFERT?</div>
+                  <div class="biggest_text">Mes Points D'Offres</div>
                   <div class="little_text text2">
                     Mon objectif avec cette chaîne YouTube est de vous aider à
                     gagner de l'argent en ligne ! Si vous souhaitez apprendre
@@ -258,11 +271,11 @@
                       <div class="service__text">
                         Formations et Coaching de chaine youtube
                       </div>
-                      <div class="service__btn">
+                      <div class="service__btn goo" to="#SERVICES1">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
-                    <div class="service">
+                    <!-- <div class="service">
                       <div class="service__ico">
                         <i class="fab fa-paypal"></i>
                       </div>
@@ -272,7 +285,7 @@
                       <div class="service__btn">
                         <i class="fas fa-arrow-down"></i>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="service">
                       <div class="service__ico">
                         <i class="fas fa-pen-nib"></i>
@@ -280,7 +293,7 @@
                       <div class="service__text">
                         Création des miniatures YouTube
                       </div>
-                      <div class="service__btn">
+                      <div class="service__btn goo" to="#SERVICES2">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
@@ -292,7 +305,7 @@
                       <div class="service__text">
                         Montage des vidéos YouTube
                       </div>
-                      <div class="service__btn">
+                      <div class="service__btn goo" to="#SERVICES3">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
@@ -303,7 +316,18 @@
                       <div class="service__text">
                         Création des boutons like et s'abonner
                       </div>
-                      <div class="service__btn">
+                      <div class="service__btn goo" to="#SERVICES4">
+                        <i class="fas fa-arrow-down"></i>
+                      </div>
+                    </div>
+                    <div class="service">
+                      <div class="service__ico">
+                        <i class="fas fa-globe"></i>
+                      </div>
+                      <div class="service__text">
+                        Création des sites web sur mesure
+                      </div>
+                      <div class="service__btn goo" to="#SERVICES5">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
@@ -348,7 +372,7 @@
                 </div>
 
                 <div class="services_list">
-                  <div class="service_define">
+                  <div id="SERVICES1" class="service_define">
                     <div class="service_define__details">
                       <div class="text1 biggest_text">
                         Formations et Coaching et de chaine youtube
@@ -390,7 +414,7 @@
                       </div>
 
                       <div class="btn_contain">
-                        <div class="btn_gen">Get Started</div>
+                        <div class="btn_gen commencer">Commençons</div>
                       </div>
                     </div>
 
@@ -399,14 +423,14 @@
                     </div>
                   </div>
 
-                  <div class="service_define">
+                  <div id="SERVICES2" class="service_define">
                     <div class="service_define__image">
                       <img src="images/service2.png" alt="Services 1" />
                     </div>
 
                     <div class="service_define__details">
                       <div class="text1 biggest_text">
-                        Formations et Coaching et de chaine youtube
+                        Création des miniatures YouTube
                       </div>
 
                       <div class="text2 little_text">
@@ -445,8 +469,158 @@
                       </div>
 
                       <div class="btn_contain">
-                        <div class="btn_gen">Get Started</div>
+                        <div class="btn_gen commencer">Commençons</div>
                       </div>
+                    </div>
+                  </div>
+                  <div id="SERVICES3" class="service_define">
+                    <div class="service_define__details">
+                      <div class="text1 biggest_text">
+                        Montage des vidéos YouTube
+                      </div>
+
+                      <div class="text2 little_text">
+                        Vous avez besoin d'une vidéo professionnelle dans les
+                        plus brefs délais ? Nous sommes là pour vous aider à
+                        atteindre cet objectif. Avec notre expertise et notre
+                        expérience, nous pouvons créer une vidéo qui capture
+                        l'essence de votre message et la présente de manière
+                        captivante, tout en respectant les délais de livraison
+                        les plus rapides du marché.
+                      </div>
+
+                      <div class="list_detail">
+                        <div class="list_detail_item">
+                          <div class="icon"><span></span></div>
+                          <div class="text">
+                            <div class="t1">La planification stratégique</div>
+                            <div class="t">
+                              Nous travaillons avec vous pour comprendre vos
+                              objectifs et créer un storyboard qui mettra en
+                              valeur votre message de manière efficace.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list_detail_item">
+                          <div class="icon"><span></span></div>
+                          <div class="text">
+                            <div class="t1">La planification stratégique</div>
+                            <div class="t">
+                              Nous travaillons avec vous pour comprendre vos
+                              objectifs et créer un storyboard qui mettra en
+                              valeur votre message de manière efficace.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="btn_contain">
+                        <div class="btn_gen commencer">Commençons</div>
+                      </div>
+                    </div>
+
+                    <div class="service_define__image">
+                      <img src="images/service2.png" alt="Services 1" />
+                    </div>
+                  </div>
+                  <div id="SERVICES4" class="service_define">
+                    <div class="service_define__image">
+                      <img src="images/service2.png" alt="Services 1" />
+                    </div>
+
+                    <div class="service_define__details">
+                      <div class="text1 biggest_text">
+                        Création des boutons like et s'abonner
+                      </div>
+
+                      <div class="text2 little_text">
+                        Vous avez besoin d'une vidéo professionnelle dans les
+                        plus brefs délais ? Nous sommes là pour vous aider à
+                        atteindre cet objectif. Avec notre expertise et notre
+                        expérience, nous pouvons créer une vidéo qui capture
+                        l'essence de votre message et la présente de manière
+                        captivante, tout en respectant les délais de livraison
+                        les plus rapides du marché.
+                      </div>
+
+                      <div class="list_detail">
+                        <div class="list_detail_item">
+                          <div class="icon"><span></span></div>
+                          <div class="text">
+                            <div class="t1">La planification stratégique</div>
+                            <div class="t">
+                              Nous travaillons avec vous pour comprendre vos
+                              objectifs et créer un storyboard qui mettra en
+                              valeur votre message de manière efficace.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list_detail_item">
+                          <div class="icon"><span></span></div>
+                          <div class="text">
+                            <div class="t1">La planification stratégique</div>
+                            <div class="t">
+                              Nous travaillons avec vous pour comprendre vos
+                              objectifs et créer un storyboard qui mettra en
+                              valeur votre message de manière efficace.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="btn_contain">
+                        <div class="btn_gen commencer">Commençons</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="SERVICES5" class="service_define">
+                    <div class="service_define__details">
+                      <div class="text1 biggest_text">
+                        Création des sites web sur mesure
+                      </div>
+
+                      <div class="text2 little_text">
+                        Vous avez besoin d'une vidéo professionnelle dans les
+                        plus brefs délais ? Nous sommes là pour vous aider à
+                        atteindre cet objectif. Avec notre expertise et notre
+                        expérience, nous pouvons créer une vidéo qui capture
+                        l'essence de votre message et la présente de manière
+                        captivante, tout en respectant les délais de livraison
+                        les plus rapides du marché.
+                      </div>
+
+                      <div class="list_detail">
+                        <div class="list_detail_item">
+                          <div class="icon"><span></span></div>
+                          <div class="text">
+                            <div class="t1">La planification stratégique</div>
+                            <div class="t">
+                              Nous travaillons avec vous pour comprendre vos
+                              objectifs et créer un storyboard qui mettra en
+                              valeur votre message de manière efficace.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list_detail_item">
+                          <div class="icon"><span></span></div>
+                          <div class="text">
+                            <div class="t1">La planification stratégique</div>
+                            <div class="t">
+                              Nous travaillons avec vous pour comprendre vos
+                              objectifs et créer un storyboard qui mettra en
+                              valeur votre message de manière efficace.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="btn_contain">
+                        <div class="btn_gen commencer">Commençons</div>
+                      </div>
+                    </div>
+
+                    <div class="service_define__image">
+                      <img src="images/service2.png" alt="Services 1" />
                     </div>
                   </div>
                 </div>
@@ -466,8 +640,6 @@
 
                 <div class="temoignage__container">
                   <div class="temoignage__container__struct">
-
-
                     <div class="testify">
                       <div class="testify__struct">
                         <div class="name">John Doe</div>
@@ -533,74 +705,164 @@
                         </div>
                       </div>
                     </div>
-
-
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
+          <div class="box_form">
+          
+            
 
-        <footer class="footer">
-          <div class="footer__struct">
+            <div class="formulaire">
 
-            <div class="item">
-                <img src="images/logo_footer.png" alt="" class="footer_logo">
 
-                <div class="contacts">
-                  <div class="contact">+32 466 41 91 74</div>
-                  <div class="contact">contact@mrlandry.com</div>
-                  <div class="contact">Mon-Fri 14:00 - 18:00</div>
+              
+
+              <div class="formulaire__struct">
+                <div class="formulaire__struct__description">
+                  <div class="title">COMMENÇONS VOTRE PROJET</div>
+
+                  <div class="description">
+                    Vous vivez dans un pays qui n'est pas éligible pour PayPal
+                    et vous voulez pouvoir profiter de tous les avantages de ce
+                    service de paiement en ligne ? Nous créons un compte PayPal
+                    pour vous en utilisant les informations que vous nous
+                    fournissez (nom, prénom, date de naissance, adresse email,
+                    mot de passe, numéro de téléphone, pays, ville) Nous offrons
+                    ce service à un prix imbattable de 5 euros. Des délais
+                    rapides : Nous livrons le compte PayPal sous 24 heures
+                  </div>
                 </div>
 
-            </div>
+                <div class="formulaire__struct__form">
+                  <div class="info_title">
+                    <div class="ico"><i class="fas fa-info"></i></div>
+                    <div class="text">Remplissez vos informations</div>
+                  </div>
 
-            <div class="item">
-              <div class="contacts">
-                <div class="contact">ADDRESSE</div>
-                <div class="contact">Liège, Paris, France</div>
-              
+                  <form class="form_contain" method="post">
+                    <input required type="text" placeholder="Votre Nom" name="nom" />
+
+                    <select required name="service" id="service">
+                      <option value="Formations et Coaching de chaine youtube">
+                        Formations et Coaching de chaine youtube
+                      </option>
+                      <option value="Création des miniatures YouTube">
+                        Création des miniatures YouTube
+                      </option>
+                      <option value="Montage des vidéos YouTube">
+                        Montage des vidéos YouTube
+                      </option>
+                      <option value="Création des boutons like et s'abonner">
+                        Création des boutons like et s'abonner
+                      </option>
+                      <option value="Création des sites web sur mesure">
+                        Création des sites web sur mesure
+                      </option>
+                    </select>
+
+                    <div class="box_input">
+                      <input
+                      required
+                        type="tel"
+                        placeholder="Votre Telephone"
+                        name="tel"
+                      />
+                      <input required type="email" placeholder="Email" name="email" />
+                    </div>
+
+                    <textarea
+                      name="comment"
+                      id="comment"
+                      required
+                      cols="30"
+                      rows="10"
+                      placeholder="Taper votre commentaire"
+                    ></textarea>
+
+                    <div  class="btn_contain">
+                      <button id="submitForm" type="submit" class="btn_gen">Envoyez</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div id="closeForm" class="formulaire__close">
+                <i class="fas fa-times-circle"></i>
+              </div>
+            </div>
+          </div>
+
+          <div id="CONTACTS" class="anchorElem"></div>
+          <footer class="footer">
+            <div class="footer__struct">
+              <div class="item">
+                <img
+                  src="images/logo_footer.png"
+                  alt=""
+                  class="footer_logo goo"
+                  to="#HOME"
+                />
+
+                <div class="contacts">
+                  <a class="contact" href="tel:+32466419174"
+                    >+32 466 41 91 74</a
+                  >
+                  <a class="contact" href="mailto:contact@mrlandry.com"
+                    >contact@mrlandry.com</a
+                  >
+                  <div class="contact">Mon-Fri 14:00 - 18:00</div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="contacts">
+                  <div class="contact">ADDRESSE</div>
+                  <div class="contact">Liège, Paris, France</div>
+                </div>
               </div>
             </div>
 
-          </div>
+            <div class="footer__struct">
+              <div class="line">
+                <img src="images/tree_footer.svg" alt="" class="tree_footer" />
 
-          <div class="footer__struct"> 
-            <div class="line">
-              <img src="images/tree_footer.svg" alt="" class="tree_footer">
+                <div class="footer_end">
+                  <div class="sign">
+                    © 2023 Mr.Landry | All rights reserved. Made by flocod
+                  </div>
 
-              <div class="footer_end">
-                <div class="sign">© 2023 Mr.Landry | All rights reserved. Made by flocod</div>
-               
-                <div class="socials">
-                  <a href="#" class="link">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                  <a href="#" class="link">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="#" class="link">
+                  <div class="socials">
+                    <a
+                      href="https://www.youtube.com/@MonsieurLANDRY1"
+                      target="_blank"
+                      class="link"
+                    >
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/mr.landryy/"
+                      target="_blank"
+                      class="link"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- <a href="#" class="link">
                     <i class="fab fa-twitter"></i>
                   </a>
                   <a href="#" class="link">
                     <i class="fab fa-tiktok"></i>
-                  </a>
-                  
+                  </a> -->
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-        </footer>
-
-
+          </footer>
         </div>
-
       </div>
     </main>
-
-   
 
     <!-- <div class="noise"></div> -->
     <script

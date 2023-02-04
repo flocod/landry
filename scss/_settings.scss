@@ -125,6 +125,11 @@ Black 900
   color: var(--fond);
 }
 
+a,a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
 // scroll bar
 
 /*** scroollbar ***/
@@ -237,6 +242,7 @@ a {
     .logo {
       display: block;
       width: 150px;
+      cursor: pointer;
       @media all and (max-width: 1000px) {
         width: 100px;
       }
@@ -547,9 +553,14 @@ a {
     }
 
     &__struct {
-      width: max-content;
+      width:100%;
       display: flex;
       justify-content: space-between;
+
+      @media all and (max-width: 1600px){
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
 
       .service {
         width: 311px;
@@ -569,9 +580,19 @@ a {
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: 30px;
-        @media all and (max-width: 1000px) {
-          margin-left: 15px;
+        @media all and (max-width: 1600px) {
+          margin-left: 0px;
         }
+        @media all and (max-width: 1450px) {
+          width: 30%;
+        }
+        @media all and (max-width: 1030px) {
+          width: 48%;
+        }
+        @media all and (max-width: 630px) {
+          width: 100%;
+        }
+       
         &:first-child {
           margin-left: 0px;
         }
@@ -616,8 +637,12 @@ a {
           .service__btn {
             color: var(--slice_color) !important;
           }
-          @media all and (max-width: 1000px) {
+
+          @media all and (max-width: 1600px) {
             transform: translateY(0px);
+          }
+
+          @media all and (max-width: 1000px) {
             margin-bottom: 0px;
           }
         }
@@ -747,14 +772,14 @@ a {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      margin-bottom: 130px;
+      margin-bottom: 150px;
       @media all and (max-width: 1000px) {
         flex-direction: column;
         .service_define__details {
           margin-bottom: 30px;
         }
 
-        margin-bottom: 100px;
+        margin-bottom: 80px;
       }
 
       &:last-child {
@@ -1009,6 +1034,7 @@ a {
       display: block;
       .footer_logo {
         width: 150px;
+        cursor: pointer;
         @media all and (max-width: 1000px) {
           width: 70%;
          }
@@ -1019,7 +1045,7 @@ a {
         .contact {
           font-size: 2em;
           margin-bottom: 10px;
-
+          display: block;
           @media all and (max-width: 1000px) {
            font-size: 1.5em;
           }
@@ -1061,6 +1087,7 @@ a {
           }
           .link {
             margin-left: 10px;
+          
           }
         }
       }
@@ -1085,6 +1112,234 @@ a {
   line-height: 1.2em;
   opacity: 0.7;
 }
+
+
+
+
+
+.box_form{
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  top: 0px;left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+
+  background-color: #ffffffe3;
+  position: fixed;
+  z-index: 888;
+
+
+
+  .formulaire{
+    width: 80%;
+    height: auto;
+    position: relative;
+    background: var(--text);
+    margin-top:calc(var(--header_h) + 50px);
+    padding-bottom: var(--header_h);
+    box-shadow: 0px 3px 30px #000000BA;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media all and (max-width:1400px){
+      width: 95%;
+    }
+
+
+  
+
+    &__struct{
+      margin-top:var(--header_h);
+      width: 85%;
+      display: flex;
+      justify-content: space-between;
+
+
+      &__description{
+      width: 48%;
+      @media all and (max-width:1200px){
+        display: none;
+      }
+      .title{
+        display: inline-block;
+        font-size: 3.5em;
+        font-family: var(--big0);
+        color: var(--fond);
+        position: relative;
+
+        &::after{
+          position: absolute;
+          bottom: -20px;
+          height: 6px;
+          left: 0px;
+          background: var(--fond);
+          content: " ";
+          width: 50%;
+        }
+      }
+
+      .description{
+        display: block;
+        margin-top: 70px;
+        line-height: normal;
+
+        color: var(--fond);
+        opacity: 0.7;
+      }
+
+      
+
+      }
+
+      &__form{
+        display: block;
+        width: 48%;
+
+        border-left: 3px solid var(--fond);
+        padding-left: 70px;
+        margin-left: 70px;
+        @media all and (max-width:1200px){
+          width: 100%;
+          border-left:none;
+          padding-left: 0px;
+          margin-left: 0px;
+        }
+
+        .info_title{
+          display: flex;
+          justify-content: left;
+          align-items: center;
+
+          .ico{
+          
+            margin-right: 10px;
+            font-size: 1.2em;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            border-radius: 50%;
+            background: var(--cta);
+            color: var(--fond);
+
+            @media all and (max-width:1000px){
+              height: 30px;
+              font-size: 1em;
+              width: 30px;
+            }
+          }
+
+          .text{
+            font-size: 1.5em;
+            color: var(--fond);
+            @media all and (max-width:1000px){
+             
+              font-size: 1em;
+     
+            }
+          }
+        }
+
+
+        .form_contain{
+          margin-top: 50px;
+          input, select, textarea{
+            display: block;
+            width: 100%;
+            font-size: 1.5em;
+            font-family: var(--noto);
+            margin-bottom: 30px;
+            background: none;
+            border: none;
+            color: var(--fond);
+            border-bottom: 2px solid var(--fond);
+            padding-bottom: 15px;
+            @media all and (max-width:1000px){
+             
+              font-size: 1em;
+     
+            }
+
+            option{
+              color: var(--text);
+              padding-left: 20px;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              &::hover{
+                
+                  color: var(--fond);
+                  background-color: var(--text);
+              
+            }}
+
+            input:invalid {
+              border: 2px dashed red;
+            }
+            
+            input:valid {
+              border: none;
+              border-bottom: 2px solid var(--fond);
+            }
+
+          }
+
+          textarea{
+            height: 80px;
+          }
+
+          .btn_contain{
+            .btn_gen{
+              user-select: none;
+              background: var(--fond);
+              box-shadow: 3px 3px 0px var(--cta);
+              color: var(--text);
+              border-color: var(--cta);
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    &__close{
+      display: block;
+      color: var(--fond) !important;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5em;
+      z-index: 10;
+      cursor: pointer;
+      @media all and (max-width:1000px){
+        top: 10px;
+      right: 10px;
+      font-size: 1.3em;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------- Grain -------------------------------------------------- */
 .noise {

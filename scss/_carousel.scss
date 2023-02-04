@@ -217,7 +217,7 @@
               bottom: 0;
               left: 50%;
               transform: translateX(-50%);
-              width: 110%;
+              width: 80%;
             }
   
             @media  all and (max-width:  1600px) and (min-height: 900px) {
@@ -225,16 +225,16 @@
             }
            
   
-            @media  all and (max-width:  1400px) {
-              width: 150%;
-            }
+            // @media  all and (max-width:  1400px) {
+            //   width: 150%;
+            // }
   
             @media  all and (max-width:  1400px) and (min-height< 900px) {
               width: 120%;
             }
   
             @media  all and (max-width:  1300px) {
-              width: 120%;
+              width: 100%;
             }
   
   
