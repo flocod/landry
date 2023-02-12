@@ -782,6 +782,14 @@ a {
         margin-bottom: 80px;
       }
 
+      &:first-child {
+        margin-top: 90px;
+
+        @media all and (max-width: 1000px) {
+          margin-bottom: 70px;
+        }
+
+      }
       &:last-child {
         margin-bottom: 0px;
       }
@@ -877,12 +885,17 @@ a {
       &__image {
         width: 48%;
 
+
+
         @media all and (max-width: 1000px) {
           width: 100%;
           margin-bottom: 30px;
         }
         img {
           width: 100%;
+          border: 3.5px solid var(--cta);
+          border-radius: 12px;
+          box-shadow: 0px 0px 10px #222;
         }
       }
     }

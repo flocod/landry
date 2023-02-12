@@ -922,6 +922,14 @@ a :hover {
     margin-bottom: 30px;
   }
 }
+.full_service .services_list .service_define:first-child {
+  margin-top: 90px;
+}
+@media all and (max-width: 1000px) {
+  .full_service .services_list .service_define:first-child {
+    margin-bottom: 70px;
+  }
+}
 .full_service .services_list .service_define:last-child {
   margin-bottom: 0px;
 }
@@ -1035,6 +1043,10 @@ a :hover {
 }
 .full_service .services_list .service_define__image img {
   width: 100%;
+  border: 3.5px solid var(--cta);
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 10px #222;
+          box-shadow: 0px 0px 10px #222;
 }
 
 .temoignage {
