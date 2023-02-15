@@ -95,7 +95,8 @@ Black 900
 }
 
 .loader {
-  display: none;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -109,7 +110,32 @@ Black 900
   font-family: "Montserrat";
   font-weight: 900;
   letter-spacing: 0px;
-  font-size: 6vw;
+  font-size: 2vw;
+
+  @media all and (max-width: 1000px){
+    font-size: 4vw;
+  }
+
+  img{
+    display: block;
+    width: 10vw;
+    margin-bottom: 0px;
+    animation: opaque 2s ease-out infinite;
+
+    @media all and (max-width: 1000px){
+      width: 30vw;
+    }
+
+  }
+
+
+  @keyframes opaque {
+
+    0%,100%{ opacity: .4;}
+    50%{opacity: 1;}
+    
+  }
+
   span {
     font-size: 3em;
   }
@@ -241,10 +267,12 @@ a {
 
     .logo {
       display: block;
-      width: 150px;
+      // width: 150px;
+      width: 80px;
       cursor: pointer;
       @media all and (max-width: 1000px) {
-        width: 100px;
+        // width: 100px;
+        width: 50px;
       }
       img {
         width: 100%;
@@ -322,6 +350,7 @@ a {
   justify-content: center;
   align-items: center;
   /* UI Properties */
+  // background: #0A684B;
   background: var(--cta) 0% 0% no-repeat padding-box;
   border: 3px solid var(--text);
   transition: 0.3s;
@@ -1048,6 +1077,8 @@ a {
       .footer_logo {
         width: 150px;
         cursor: pointer;
+        filter: drop-shadow( 3px 3px 0px var(--fond));
+      
         @media all and (max-width: 1000px) {
           width: 70%;
          }
@@ -1200,7 +1231,12 @@ a {
         line-height: normal;
 
         color: var(--fond);
-        opacity: 0.7;
+        opacity: 1;
+
+        img{
+          width: 80%;
+        }
+
       }
 
       
@@ -1307,6 +1343,7 @@ a {
           .btn_contain{
             .btn_gen{
               user-select: none;
+              // background: #57D057;
               background: var(--fond);
               box-shadow: 3px 3px 0px var(--cta);
               color: var(--text);
@@ -1379,11 +1416,11 @@ a {
   -webkit-animation: noise 1s steps(2) infinite;
   animation: noise 1s steps(2) infinite;
 }
-// @media all and (max-width: 700px) {
-//   .noise {
-//     display: none !important;
-//   }
-// }
+@media all and (max-width: 700px) {
+  .noise {
+    display: none !important;
+  }
+}
 @-webkit-keyframes noise {
   0% {
     -webkit-transform: translate3d(0, 9rem, 0);

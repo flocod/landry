@@ -76,7 +76,13 @@ Black 900
 }
 
 .loader {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -94,7 +100,40 @@ Black 900
   font-family: "Montserrat";
   font-weight: 900;
   letter-spacing: 0px;
-  font-size: 6vw;
+  font-size: 2vw;
+}
+@media all and (max-width: 1000px) {
+  .loader {
+    font-size: 4vw;
+  }
+}
+.loader img {
+  display: block;
+  width: 10vw;
+  margin-bottom: 0px;
+  -webkit-animation: opaque 2s ease-out infinite;
+          animation: opaque 2s ease-out infinite;
+}
+@media all and (max-width: 1000px) {
+  .loader img {
+    width: 30vw;
+  }
+}
+@-webkit-keyframes opaque {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes opaque {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 .loader span {
   font-size: 3em;
@@ -243,12 +282,12 @@ a :hover {
 }
 .header .struct .logo {
   display: block;
-  width: 150px;
+  width: 80px;
   cursor: pointer;
 }
 @media all and (max-width: 1000px) {
   .header .struct .logo {
-    width: 100px;
+    width: 50px;
   }
 }
 .header .struct .logo img {
@@ -1227,6 +1266,8 @@ a :hover {
 .footer__struct .item .footer_logo {
   width: 150px;
   cursor: pointer;
+  -webkit-filter: drop-shadow(3px 3px 0px var(--fond));
+          filter: drop-shadow(3px 3px 0px var(--fond));
 }
 @media all and (max-width: 1000px) {
   .footer__struct .item .footer_logo {
@@ -1398,7 +1439,10 @@ a :hover {
   margin-top: 70px;
   line-height: normal;
   color: var(--fond);
-  opacity: 0.7;
+  opacity: 1;
+}
+.box_form .formulaire__struct__description .description img {
+  width: 80%;
 }
 .box_form .formulaire__struct__form {
   display: block;
@@ -1556,6 +1600,11 @@ a :hover {
   animation: noise 1s steps(2) infinite;
 }
 
+@media all and (max-width: 700px) {
+  .noise {
+    display: none !important;
+  }
+}
 @-webkit-keyframes noise {
   0% {
     -webkit-transform: translate3d(0, 9rem, 0);
