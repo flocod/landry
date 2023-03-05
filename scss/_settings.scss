@@ -593,13 +593,13 @@ a {
 
       .service {
         width: 311px;
-        height: 368px;
+        height: auto;
         display: flex;
         flex-direction: column;
         font-size: 1.5em;
         color: var(--fond);
         font-family: var(--big1);
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         /* UI Properties */
 
@@ -634,13 +634,46 @@ a {
         &__ico {
           font-size: 3em;
         }
+
+        &__image{
+          width: 100%;
+          border-bottom: 3px solid var(--text);
+          border-radius: 2px;
+       
+          overflow: hidden;
+          img{
+            width: 100%;
+            height:auto;
+            object-fit: cover;
+          }
+        }
+
         &__text {
           font-size: 1.2em;
-          text-align: center;
+
+          text-align: left;
           margin-top: 30px;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
           width: 85%;
         }
+
+        &__price{
+          display: block;
+          font-weight: bold;
+          font-family: Montserrat;
+          font-size: .8em;
+          width: 85%;
+          text-align: left;
+          margin-top: 0px;
+          margin-bottom: 30px;
+          text-decoration: underline;
+          
+
+          span{
+            font-weight: normal;
+          }
+        }
+
         &__btn {
           width: 74px;
           height: 74px;
@@ -651,6 +684,21 @@ a {
           background: var(--fond) 0% 0% no-repeat padding-box;
           box-shadow: inset 0px 3px 6px #00000063;
           font-size: 1em;
+
+          display: none;
+        }
+
+        .btn_gen{
+          font-size: .8em !important; 
+          color: var(--fond) !important;
+          width: 55% !important;
+          height: 30px;
+          margin-bottom: 10px;
+
+          &:nth-child(2n+1) {
+          margin-bottom: 25px !important;
+          }
+
         }
 
         &:nth-child(2n + 1) {
@@ -658,6 +706,11 @@ a {
           .service__btn {
             color: var(--cta);
           }
+
+          .btn_gen{
+            background: var(--cta) 0% 0% no-repeat padding-box;
+          }
+
         }
         &:nth-child(2n) {
           transform: translateY(50px);
@@ -665,6 +718,10 @@ a {
           background: var(--slice_color) 0% 0% no-repeat padding-box;
           .service__btn {
             color: var(--slice_color) !important;
+          }
+
+          .btn_gen{
+            background:  var(--slice_color) 0% 0% no-repeat padding-box;
           }
 
           @media all and (max-width: 1600px) {
@@ -990,6 +1047,8 @@ a {
       display: flex;
       justify-content: space-between;
 
+
+
       .testify {
         width: 400px;
         height: 250px;
@@ -1021,6 +1080,16 @@ a {
           width: 90%;
           margin-top: 20px;
 
+          .image_travaux{
+            width: 100%;
+           
+            img{
+              width: 100%;
+             
+              object-fit: cover;
+            }
+          }
+
           .name {
             display: block;
             font-size: 1.2em;
@@ -1040,7 +1109,46 @@ a {
           }
         }
       }
+
+      .work{
+        height: auto !important;
+
+        .testify__struct{
+          width: 100% !important; 
+          margin-top: 0px;
+        }
+      }
     }
+
+    .no_swipe_struct{
+      width:100%;
+      display: flex;
+      justify-content: space-between;
+     
+      @media all and (max-width: 1600px){
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .work{
+          margin-left: 0px;
+          margin-right: 0px;
+          width: 30%;
+          margin-top: 0px !important;
+          margin-bottom: 15px !important;
+         
+        }
+      }
+      @media all and (max-width: 710px){
+        .work{
+          width: 47%;
+        }
+      }
+      @media all and (max-width: 430px){
+        .work{
+          width: 100%;
+        }
+      }
+    }
+
   }
 }
 
@@ -1342,6 +1450,7 @@ a {
 
           .btn_contain{
             .btn_gen{
+              height: 40px;
               user-select: none;
               // background: #57D057;
               background: var(--fond);

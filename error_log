@@ -1,0 +1,10 @@
+[18-Feb-2023 16:34:31 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'UTF' (T_STRING) in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 45
+[18-Feb-2023 16:35:46 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'UTF' (T_STRING) in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 45
+[18-Feb-2023 16:36:51 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'UTF' (T_STRING) in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 45
+[18-Feb-2023 16:37:08 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'UTF' (T_STRING) in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 45
+[18-Feb-2023 16:54:55 Asia/Kolkata] PHP Warning:  sleep() expects exactly 1 parameter, 0 given in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 39
+[19-Feb-2023 01:17:55 Asia/Kolkata] PHP Warning:  sleep() expects exactly 1 parameter, 0 given in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 39
+[19-Feb-2023 01:21:20 Asia/Kolkata] PHP Warning:  sleep() expects exactly 1 parameter, 0 given in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 39
+[19-Feb-2023 01:23:08 Asia/Kolkata] PHP Warning:  sleep() expects exactly 1 parameter, 0 given in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 39
+[22-Feb-2023 17:23:51 Asia/Kolkata] PHP Warning:  sleep() expects exactly 1 parameter, 0 given in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 39
+[03-Mar-2023 04:16:15 Asia/Kolkata] PHP Warning:  sleep() expects exactly 1 parameter, 0 given in /home/mnlandry/domains/monsieurlandry.fr/public_html/mail.php on line 39

@@ -667,7 +667,7 @@ a :hover {
 }
 .services .service_container__struct .service {
   width: 311px;
-  height: 368px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -678,9 +678,9 @@ a :hover {
   font-size: 1.5em;
   color: var(--fond);
   font-family: var(--big1);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -725,12 +725,38 @@ a :hover {
 .services .service_container__struct .service__ico {
   font-size: 3em;
 }
+.services .service_container__struct .service__image {
+  width: 100%;
+  border-bottom: 3px solid var(--text);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.services .service_container__struct .service__image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .services .service_container__struct .service__text {
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 85%;
+}
+.services .service_container__struct .service__price {
+  display: block;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 0.8em;
+  width: 85%;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+.services .service_container__struct .service__price span {
+  font-weight: normal;
 }
 .services .service_container__struct .service__btn {
   width: 74px;
@@ -749,12 +775,26 @@ a :hover {
   -webkit-box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3882352941);
           box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3882352941);
   font-size: 1em;
+  display: none;
+}
+.services .service_container__struct .service .btn_gen {
+  font-size: 0.8em !important;
+  color: var(--fond) !important;
+  width: 55% !important;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.services .service_container__struct .service .btn_gen:nth-child(2n+1) {
+  margin-bottom: 25px !important;
 }
 .services .service_container__struct .service:nth-child(2n+1) {
   background: var(--cta) 0% 0% no-repeat padding-box;
 }
 .services .service_container__struct .service:nth-child(2n+1) .service__btn {
   color: var(--cta);
+}
+.services .service_container__struct .service:nth-child(2n+1) .btn_gen {
+  background: var(--cta) 0% 0% no-repeat padding-box;
 }
 .services .service_container__struct .service:nth-child(2n) {
   -webkit-transform: translateY(50px);
@@ -764,6 +804,9 @@ a :hover {
 }
 .services .service_container__struct .service:nth-child(2n) .service__btn {
   color: var(--slice_color) !important;
+}
+.services .service_container__struct .service:nth-child(2n) .btn_gen {
+  background: var(--slice_color) 0% 0% no-repeat padding-box;
 }
 @media all and (max-width: 1600px) {
   .services .service_container__struct .service:nth-child(2n) {
@@ -1200,6 +1243,14 @@ a :hover {
   width: 90%;
   margin-top: 20px;
 }
+.temoignage__container__struct .testify__struct .image_travaux {
+  width: 100%;
+}
+.temoignage__container__struct .testify__struct .image_travaux img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .temoignage__container__struct .testify__struct .name {
   display: block;
   font-size: 1.2em;
@@ -1214,6 +1265,48 @@ a :hover {
   color: var(--text);
   font-size: 0.63em;
   font-family: var(--noto);
+}
+.temoignage__container__struct .work {
+  height: auto !important;
+}
+.temoignage__container__struct .work .testify__struct {
+  width: 100% !important;
+  margin-top: 0px;
+}
+.temoignage__container .no_swipe_struct {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media all and (max-width: 1600px) {
+  .temoignage__container .no_swipe_struct {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .temoignage__container .no_swipe_struct .work {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 30%;
+    margin-top: 0px !important;
+    margin-bottom: 15px !important;
+  }
+}
+@media all and (max-width: 710px) {
+  .temoignage__container .no_swipe_struct .work {
+    width: 47%;
+  }
+}
+@media all and (max-width: 430px) {
+  .temoignage__container .no_swipe_struct .work {
+    width: 100%;
+  }
 }
 
 .footer {
@@ -1546,6 +1639,7 @@ a :hover {
   height: 80px;
 }
 .box_form .formulaire__struct__form .form_contain .btn_contain .btn_gen {
+  height: 40px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

@@ -7,8 +7,8 @@ function loader_percentage() {
 
     if (loader_percen.percen.toFixed(2) >= 100) {
       $(".loader").fadeOut();
-      $("body").css('overflow-y','auto');
-      $("main").css('opacity','1');
+      $("body").css("overflow-y", "auto");
+      $("main").css("opacity", "1");
     }
   }
 
@@ -32,7 +32,7 @@ function loader_percentage() {
     tImg.onerror = imgLoaded;
     tImg.src = img[i].src;
     console.log(` image ${i} est correctement chargée`);
-    console.log("tImg",i);
+    console.log("tImg", i);
   }
 }
 
@@ -54,52 +54,55 @@ addActiveClass("#menu ul li");
 
 let $root = $(".CONTAINER");
 
+function isElementInViewport(el) {
+  //special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight ||
+        document.documentElement.clientHeight) /*or $(window).height() */ &&
+    rect.right <=
+      (window.innerWidth ||
+        document.documentElement.clientWidth) /*or $(window).width() */
+  );
+}
+// click-to-scroll behavior
+$(".goo").click(function (e) {
+  e.preventDefault();
+  let section = $(this).attr("to");
+  let sectionClean = section.substring(section.indexOf("#"));
 
-function isElementInViewport (el) {
-    //special bonus for those using jQuery
-    if (typeof jQuery === "function" && el instanceof jQuery) {
-      el = el[0];
-    }
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+  if (window.location.hash != sectionClean) {
+    $root.animate(
+      {
+        scrollTop: $(sectionClean).offset().top,
+      },
+      0,
+      function () {
+        window.location.hash = sectionClean;
+      }
     );
   }
-  // click-to-scroll behavior
-  $(".goo").click(function (e) {
-    e.preventDefault();
-    let section = $(this).attr('to');
-    let sectionClean = section.substring(section.indexOf("#"));
-
-
-   if( window.location.hash != sectionClean){
-    $root.animate({
-        scrollTop: $(sectionClean).offset().top
-      }, 0, function () {
-        window.location.hash = sectionClean;
-      });
-   }
-
-
-  });
-  // listen for the scroll event
-  $root.on("scroll", function() {
-    console.log("onscroll event fired...");
-    // check if the anchor elements are visible
-    $(".anchorElem").each(function (idx, el) {
-      if ( isElementInViewport(el) ) {
-        // update the URL hash
-        if (window.history.pushState) {
-          let urlHash = "#" + $(el).attr("id");
-          window.history.pushState(null, null, urlHash);
-        }
+});
+// listen for the scroll event
+$root.on("scroll", function () {
+  console.log("onscroll event fired...");
+  // check if the anchor elements are visible
+  $(".anchorElem").each(function (idx, el) {
+    if (isElementInViewport(el)) {
+      // update the URL hash
+      if (window.history.pushState) {
+        let urlHash = "#" + $(el).attr("id");
+        window.history.pushState(null, null, urlHash);
       }
-    });
+    }
   });
-
+});
 
 // $(document).ready(function () {
 //   // Add smooth scrolling to all links
@@ -131,20 +134,150 @@ function isElementInViewport (el) {
 //   });
 // });
 
-
-
-$("#closeForm").click(function() {
-    $(".box_form").fadeOut()
+$("#closeForm").click(function () {
+  $(".box_form").fadeOut();
 });
-$(".commencer").click(function() {
-    $(".box_form").fadeIn();
-    $(".box_form").css("display","flex");
+$(".commencer").click(function () {
+  $(".box_form").fadeIn();
+  $(".box_form").css("display", "flex");
+
+  let monTexte = $(this).attr("contenu");
+
+  $("#service option").removeAttr("selected");
+  $("#service option")
+    .filter(function () {
+      return $(this).attr("contenu") == monTexte;
+    })
+    .attr("selected", "selected");
 });
 
+// teste si le Numero de téléphone est valide est valide
+// function validatePhone(txtPhone) {
+//   let filter =
+//   /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
+//   // let filter =
+//   //   /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+//   if (filter.test(Number(txtPhone))) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-$("#submitForm").on("submit",function(event){
-    event.preventDefault;
+// Format Phone Number
+function validatePhone(p) {
+  let phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
+  let parsedPhone;
+  try {
+    parsedPhone = phoneUtil.parse(p);
+    console.log("phone is valid");
+  } catch (error) {
+    console.log("phone error =>", error);
+    return false;
+  }
 
-    
+  if (phoneUtil.isValidNumber(parsedPhone)) {
+    console.log(
+      "phoneUtil.format(parsedPhone, libphonenumber.PhoneNumberFormat.INTERNATIONAL)",
+      phoneUtil.format(
+        parsedPhone,
+        libphonenumber.PhoneNumberFormat.INTERNATIONAL
+      )
+    );
+    return phoneUtil.format(
+      parsedPhone,
+      libphonenumber.PhoneNumberFormat.INTERNATIONAL
+    );
+  } else {
+    return false;
+  }
+}
 
-})
+// teste si l'email est valide
+function isValidEmailAddress(email) {
+  return (
+    /^[a-z0-9]+([-._][a-z0-9]+)*@([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,4}$/.test(
+      email
+    ) && /^(?=.{1,64}@.{4,64}$)(?=.{6,100}$).*/.test(email)
+  );
+}
+
+function sendContact() {
+  let nom_form_contact = $("#form_name").val();
+
+  let selected_service = $("#service").val();
+  let email_form_contact = $("#form_email").val();
+  let tel_form_contact = $("#form_tel").val();
+
+  let message_form_contact = $("#form_comment").val();
+
+  let html_email2;
+  email_form_contact = isValidEmailAddress(email_form_contact)
+    ? email_form_contact
+    : "";
+
+  if (
+    nom_form_contact != "" ||
+    tel_form_contact != "" ||
+    selected_service != "" 
+  ) {
+    if (validatePhone(tel_form_contact)) {
+      let form = "";
+      form = $("#form_contact").get(0);
+
+      let formData = new FormData(form);
+
+  
+
+      $.ajax({
+        url: "mail.php",
+        type: "POST",
+        enctype: "multipart/form-data",
+        data: formData,
+        processData: false,
+        contentType: false,
+        cache: false,
+        timeout: 20000,
+        dataType: "html",
+        beforeSend: function () {
+
+          $(".loader").fadeIn();
+          $(".loader .loader_counter").fadeOut();
+          setTimeout(()=>{
+
+          },1000);
+
+        },
+        success: function (reponse, statut) {
+          $(".loader").fadeOut();
+          // $(
+          //   "<br><div class='php_exec' style='color:#2b2b2b; font-size:1em;'>" +
+          //     reponse +
+          //     "</div>"
+          // ).insertAfter(".war_add_sendContact");
+
+           setTimeout(()=>{
+				alert(reponse);
+          },1000);
+      
+
+         
+        },
+        complete: function () {
+          $(".loader").fadeOut();
+     
+        },
+      });
+
+
+    } else {
+      alert("Le numero de telephone est incorrect ! Ajoutez le code de votre pays");
+    }
+  } else {
+    alert("veuillez remplir tous les champs !");
+  }
+}
+
+$("#submitForm").on("click", function (event) {
+  sendContact();
+});
