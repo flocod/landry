@@ -82,29 +82,30 @@
       href="https://www.youtube.com/s/desktop/82a4cf4f/img/favicon_96x96.png"
       sizes="96x96"
     /> -->
-    <link
-      rel="icon"
-      href="images/logo_1.png"
-    />
-
+    <link rel="icon" href="images/logo_1.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R5PW57RPTJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-R5PW57RPTJ');
-</script>
-    
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-R5PW57RPTJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-R5PW57RPTJ");
+    </script>
   </head>
   <body class="body light">
-    <div class="loader">
-      <img src="images/logo_1.png" alt="">
-      <div class="loader_counter"><span id="percenDisplay">0</span> %</div>
-    </div>
+    <!-- <div class="loader">
+      <img src="images/logo_1.png" alt="" />
+      <div class="loader_counter" ><span id="percenDisplay">0</span> %</div>
+    </div> -->
 
     <main class="main">
       <!-- enter content -->
@@ -123,7 +124,7 @@
           <header class="header">
             <div class="struct">
               <div class="logo goo" to="#HOME">
-                <img src="images/logo_1.png" alt="logo Mr Landry" />
+                <img class="lazy"  src="images/logo_1.png" alt="logo Mr Landry" />
               </div>
 
               <nav id="menu">
@@ -141,10 +142,11 @@
 
           <div class="carousel">
             <div class="carousel__struct">
-              <div class="carousel__struct__text">
-                <div class="text1">
-                  Monsieur <br />
-                  <span>Landry</span>
+              <div class="carousel__struct__text" data-aos="zoom-out-up">
+                <div class="text1" data-aos="fade-down">
+                  Monsieur
+                  <br />
+                  <span class="Landry">Landry</span>
                 </div>
                 <div class="text2">
                   Maximisez votre potentiel sur YouTube avec nos services
@@ -155,12 +157,12 @@
                   services et atteindre vos objectifs en ligne.
                 </div>
 
-                <div class="btn_container">
+                <div class="btn_container"  >
                   <div class="btn_gen commencer">Commandez</div>
                   <div to="#PROPOS" class="btn_gen btn_gen_2 goo">A Propos</div>
                 </div>
 
-                <div class="social_link">
+                <div class="social_link" >
                   <div class="title">SUIVEZ MOI ICI</div>
                   <div class="links">
                     <a
@@ -194,16 +196,17 @@
                 </div>
               </div>
 
-              <div class="carousel__struct__image">
+              <div class="carousel__struct__image" data-aos="fade-left">
                 <div class="image">
                   <!-- <img src="images/profile.png" alt="Photo Mr Landry"> -->
                   <!-- <img src="images/profile3.png" alt="Photo Mr Landry"> -->
-                  <img src="images/profile2.png" alt="Photo Mr Landry" />
+                  <!-- <img src="images/profile2.png" alt="Photo Mr Landry" /> -->
+                  <img class="lazy"  src="images/started.png" alt="Photo Mr Landry" />
                 </div>
               </div>
             </div>
 
-            <img class="tree" src="images/tree.svg" alt=" Mr Landry tree" />
+            <img class="lazy tree" src="images/tree.svg"   alt=" Mr Landry tree" />
             <div class="border_bottom"></div>
             <img
               class="tree htree"
@@ -214,23 +217,34 @@
               class="iconsbg none_item_1000px"
               src="images/iconsbg.svg"
               alt=" Mr Landry icons"
+            
             />
           </div>
 
           <section id="PROPOS" class="group anchorElem">
             <div class="group__struct">
               <div class="about">
-                <div class="about__image">
+                <div class="about__image" >
                   <img
-                    class="pc"
+                    class="lazy pc"
+                    src="images/profile.svg"
+                    alt="Photo de Mr Landry"
+                  />
+                  <img
+                    class="lazy mobile"
+                    src="images/started.png"
+                    alt="Photo de Mr Landry"
+                  />
+                  <!-- <img
+                    class="lazy pc"
                     src="images/about.png"
                     alt="Photo de Mr Landry"
                   />
                   <img
-                    class="mobile"
+                    class="lazy mobile"
                     src="images/about1.png"
                     alt="Photo de Mr Landry"
-                  />
+                  /> -->
                 </div>
 
                 <div class="about__text">
@@ -297,142 +311,177 @@
 
                 <div class="service_container">
                   <div class="service_container__struct">
-                    <div class="service " >
+                    <div class="service">
                       <!-- <div class="service__ico">
                         <i class="fab fa-youtube"></i>
                       </div> -->
 
                       <div class="service__image">
-                        <img src="images/services/formation.jpg" alt="Formations et Coaching de chaine youtube">
+                        <img class="lazy"
+                          src="images/services/formation.jpg"
+                          alt="Formations et Coaching de chaine youtube"
+                        />
                       </div>
-
 
                       <div class="service__text">
                         Formations et Coaching de chaine youtube
                       </div>
                       <div class="service__price">
-                        $ 200  <span>/ par mois</span>
-                       </div>
+                        selon vos objectifs <span></span>
+                      </div>
 
-                       <div contenu="SERVICES1" class="btn_gen commencer">Commandez</div>
-                       <div  class="btn_gen goo" to="#SERVICES1">En savoir +</div>
+                      <div contenu="SERVICES1" class="btn_gen commencer">
+                        Commandez
+                      </div>
+                      <div class="btn_gen goo" to="#SERVICES1">En savoir +</div>
 
                       <div class="service__btn">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
 
-
-
-                    <div class="service " >
+                    <div class="service">
                       <!-- <div class="service__ico">
                         <i class="fab fa-paypal"></i>
                       </div> -->
-                    
+
                       <div class="service__image">
-                        <img src="images/services/retrait.jpg" alt="Retraits paypal">
+                        <img class="lazy"
+                          src="images/services/retrait.jpg"
+                          alt="Retraits paypal"
+                        />
                       </div>
                       <div class="service__text">Retraits paypal</div>
 
                       <div class="service__price">
-                        $ 200  <span>/ Retrait</span>
-                       </div>
+                        5% du montant <span>/ Retrait</span>
+                      </div>
 
-                       <div contenu="SERVICESPaypal" class="btn_gen commencer">Commandez</div>
-                       <div  class="btn_gen goo" to="#SERVICESPaypal">En savoir +</div>
+                      <div contenu="SERVICESPaypal" class="btn_gen commencer">
+                        Commandez
+                      </div>
+                      <div class="btn_gen goo" to="#SERVICESPaypal">
+                        En savoir +
+                      </div>
 
                       <div class="service__btn">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
-                    <div class="service " >
+                    <div class="service">
                       <!-- <div class="service__ico">
                         <i class="fas fa-pen-nib"></i>
                       </div> -->
-                     
+
                       <div class="service__image">
-                        <img src="images/services/miniature.jpg" alt="Création des miniatures YouTube">
+                        <img class="lazy"
+                          src="images/services/miniature.jpg"
+                          alt="Création des miniatures YouTube"
+                        />
                       </div>
                       <div class="service__text">
                         Création des miniatures YouTube
                       </div>
 
                       <div class="service__price">
-                        $ 200  <span>/ Miniature</span>
-                       </div>
+                        6€ <span>/ 02 ou 03 Miniatures</span>
+                      </div>
 
-                       <div contenu="SERVICES2" class="btn_gen commencer">Commandez</div>
-                       <div  class="btn_gen goo" to="#SERVICES2">En savoir +</div>
+                      <div contenu="SERVICES2" class="btn_gen commencer">
+                        Commandez
+                      </div>
+                      <div class="btn_gen goo" to="#SERVICES2">En savoir +</div>
 
                       <div class="service__btn">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
 
-                    <div class="service " >
+                    <div class="service">
                       <!-- <div class="service__ico">
                         <i class="fas fa-video"></i>
                       </div> -->
-                   
+
                       <div class="service__image">
-                        <img src="images/services/montage.jpg" alt=" Montage des vidéos YouTube">
+                        <img class="lazy"
+                          src="images/services/montage.jpg"
+                          alt=" Montage des vidéos YouTube"
+                        />
                       </div>
                       <div class="service__text">
                         Montage des vidéos YouTube
                       </div>
 
                       <div class="service__price">
-                        $ 200  <span>/ Montage</span>
-                       </div>
+                        24.99€ <span>/ video moins de 15min</span> <br /><br />
+                        34.99€ <span>/ video entre 15min-20min</span>
+                        <br /><br />
+                        pour un service personnalisé mentionnez le en
+                        commentaire <span></span>
+                      </div>
 
-                       <div contenu="SERVICES3" class="btn_gen commencer">Commandez</div>
-                       <div  class="btn_gen goo" to="#SERVICES3">En savoir +</div>
+                      <div contenu="SERVICES3" class="btn_gen commencer">
+                        Commandez
+                      </div>
+                      <div class="btn_gen goo" to="#SERVICES3">En savoir +</div>
 
                       <div class="service__btn">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
-                    <div class="service " >
+                    <div class="service">
                       <!-- <div class="service__ico">
                         <i class="fas fa-thumbs-up"></i>
                       </div> -->
-                      
+
                       <div class="service__image">
-                        <img src="images/services/bouton.jpg" alt="Création des miniatures YouTube">
+                        <img class="lazy"
+                          src="images/services/bouton.jpg"
+                          alt="Création des miniatures YouTube"
+                        />
                       </div>
                       <div class="service__text">
                         Création des boutons like et s'abonner
                       </div>
-                     
-                      <div class="service__price">
-                        $ 200  <span>/ Bouton</span>
-                       </div>
 
-                       <div contenu="SERVICES4" class="btn_gen commencer">Commandez</div>
-                       <div  class="btn_gen goo" to="#SERVICES4">En savoir +</div>
+                      <div class="service__price">
+                        5 € <span>/ Bouton like s’abonner</span>
+                      </div>
+
+                      <div contenu="SERVICES4" class="btn_gen commencer">
+                        Commandez
+                      </div>
+                      <div class="btn_gen goo" to="#SERVICES4">En savoir +</div>
 
                       <div class="service__btn">
                         <i class="fas fa-arrow-down"></i>
                       </div>
                     </div>
-                    <div class="service " >
+                    <div class="service">
                       <!-- <div class="service__ico">
                         <i class="fas fa-globe"></i>
                       </div> -->
-                      
+
                       <div class="service__image">
-                        <img src="images/services/siteweb.jpg" alt="Création des sites web sur mesure">
+                        <img class="lazy"
+                          src="images/services/siteweb.jpg"
+                          alt="Création des sites web sur mesure"
+                        />
                       </div>
                       <div class="service__text">
                         Création des sites web sur mesure
                       </div>
-                     
-                      <div class="service__price">
-                        <span>à partir de </span> $ 200  
-                       </div>
 
-                       <div contenu="SERVICES5" class="btn_gen commencer">Commandez</div>
-                       <div  class="btn_gen goo" to="#SERVICES5">En savoir +</div>
+                      <div class="service__price">
+                        <span
+                          >le budget dependra de votre cahier de charges
+                        </span>
+                      </div>
+
+                      <div contenu="SERVICES5" class="btn_gen commencer">
+                        Commandez
+                      </div>
+                      <div class="btn_gen goo" to="#SERVICES5">En savoir +</div>
 
                       <div class="service__btn">
                         <i class="fas fa-arrow-down"></i>
@@ -527,12 +576,14 @@
                       </div> -->
 
                       <div class="btn_contain">
-                        <div contenu="SERVICES1" class="btn_gen commencer">Commandez</div>
+                        <div contenu="SERVICES1" class="btn_gen commencer">
+                          Commandez
+                        </div>
                       </div>
                     </div>
 
                     <div class="service_define__image">
-                      <img
+                      <img class="lazy"
                         src="images/formation.jpeg"
                         alt="Formation sur YouTube"
                       />
@@ -541,7 +592,10 @@
 
                   <div id="SERVICESPaypal" class="service_define">
                     <div class="service_define__image">
-                      <img src="images/paypalretraits.jpg" alt=" Retrais Paypal" />
+                      <img class="lazy"
+                        src="images/paypalretraits.jpg"
+                        alt=" Retrais Paypal"
+                      />
                     </div>
 
                     <div class="service_define__details">
@@ -587,14 +641,14 @@
                       </div> -->
 
                       <div class="btn_contain">
-                        <div contenu="SERVICESPaypal" class="btn_gen commencer">Commandez</div>
+                        <div contenu="SERVICESPaypal" class="btn_gen commencer">
+                          Commandez
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div id="SERVICES2" class="service_define">
-
-
                     <div class="service_define__details">
                       <div class="text1 biggest_text">
                         Création des miniatures YouTube
@@ -641,22 +695,22 @@
                       </div> -->
 
                       <div class="btn_contain">
-                        <div contenu="SERVICES2" class="btn_gen commencer">Commandez</div>
+                        <div contenu="SERVICES2" class="btn_gen commencer">
+                          Commandez
+                        </div>
                       </div>
                     </div>
 
                     <div class="service_define__image">
-                      <img
+                      <img class="lazy"
                         src="images/miniatures.jpeg"
                         alt="Création de miniatures"
                       />
                     </div>
-
                   </div>
                   <div id="SERVICES3" class="service_define">
-
                     <div class="service_define__image">
-                      <img src="images/montagevideo.jpeg" alt="Montage video" />
+                      <img class="lazy"  src="images/montagevideo.jpeg" alt="Montage video" />
                     </div>
 
                     <div class="service_define__details">
@@ -704,15 +758,13 @@
                       </div> -->
 
                       <div class="btn_contain">
-                        <div contenu="SERVICES3" class="btn_gen commencer">Commandez</div>
+                        <div contenu="SERVICES3" class="btn_gen commencer">
+                          Commandez
+                        </div>
                       </div>
                     </div>
-
-
                   </div>
                   <div id="SERVICES4" class="service_define">
-
-
                     <div class="service_define__details">
                       <div class="text1 biggest_text">
                         Création des boutons like et s'abonner
@@ -760,22 +812,22 @@
                       </div> -->
 
                       <div class="btn_contain">
-                        <div contenu="SERVICES4" class="btn_gen commencer">Commandez</div>
+                        <div contenu="SERVICES4" class="btn_gen commencer">
+                          Commandez
+                        </div>
                       </div>
                     </div>
 
                     <div class="service_define__image">
-                      <img
+                      <img class="lazy"
                         src="images/creationboutons.jpeg"
                         alt="Création des boutons like et s'abonner"
                       />
                     </div>
-
                   </div>
                   <div id="SERVICES5" class="service_define">
-
                     <div class="service_define__image">
-                      <img
+                      <img class="lazy"
                         src="images/siteweb.jpg"
                         alt="Création des sites web sur mesure"
                       />
@@ -827,11 +879,11 @@
                       </div> -->
 
                       <div class="btn_contain">
-                        <div contenu="SERVICES5" class="btn_gen commencer ">Commandez</div>
+                        <div contenu="SERVICES5" class="btn_gen commencer">
+                          Commandez
+                        </div>
                       </div>
                     </div>
-
-
                   </div>
                 </div>
               </div>
@@ -844,47 +896,160 @@
                 <div class="temoignage__title">
                   <div class="biggest_text">Travaux Récents</div>
                   <div class="little_text">
-                    Voici une selection de quelques travaux que nous avons réalisé. 
+                    Voici une selection de quelques travaux que nous avons
+                    réalisé.
                   </div>
                 </div>
 
                 <div class="temoignage__container">
                   <div class="temoignage__container__struct no_swipe_struct">
                     <div class="testify work">
-                      <div class="testify__struct ">
-
-                        <div class="image_travaux">
-                          <img src="images/services/miniature.jpg" alt="">
-                        </div>
-
-
-                      </div>
-                    </div>
-                    <div class="testify work">
                       <div class="testify__struct">
                         <div class="image_travaux">
-                          <img src="images/services/miniature.jpg" alt="">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-03-42.jpg"
+                            alt="Travaux Récents"
+                          />
                         </div>
                       </div>
                     </div>
                     <div class="testify work">
                       <div class="testify__struct">
                         <div class="image_travaux">
-                          <img src="images/services/miniature.jpg" alt="">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-03-46.jpg"
+                            alt="Travaux Récents"
+                          />
                         </div>
                       </div>
                     </div>
                     <div class="testify work">
                       <div class="testify__struct">
                         <div class="image_travaux">
-                          <img src="images/services/miniature.jpg" alt="">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-03-48.jpg"
+                            alt="Travaux Récents"
+                          />
                         </div>
                       </div>
                     </div>
                     <div class="testify work">
                       <div class="testify__struct">
                         <div class="image_travaux">
-                          <img src="images/services/miniature.jpg" alt="">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-03-51.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-03-53.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-03-55.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-03-57.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-03-59.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-04-01.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-04-03.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-04-05.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-04-07.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-04-09.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-04-10.jpg"
+                            alt="Travaux Récents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testify work">
+                      <div class="testify__struct">
+                        <div class="image_travaux">
+                          <img class="lazy"
+                            src="images/exemples/photo_2023-03-08_22-04-12.jpg"
+                            alt="Travaux Récents"
+                          />
                         </div>
                       </div>
                     </div>
@@ -893,8 +1058,6 @@
               </div>
             </div>
           </section>
-
-
 
           <section class="group">
             <div class="group__struct">
@@ -911,7 +1074,7 @@
                     <div class="testify">
                       <div class="testify__struct">
                         <div class="name">Marie</div>
-                        <img src="images/stars.svg" alt="stars" class="stars" />
+                        <img class="lazy"  src="images/stars.svg" alt="stars" class="stars" />
                         <div class="description">
                           "J'ai été vraiment impressionné par la qualité de la
                           miniature YouTube créée pour ma chaîne. C'était
@@ -924,7 +1087,7 @@
                     <div class="testify">
                       <div class="testify__struct">
                         <div class="name">David</div>
-                        <img src="images/stars.svg" alt="stars" class="stars" />
+                        <img   src="images/stars.svg" alt="stars" class="stars" />
                         <div class="description">
                           "Le bouton "S'abonner" personnalisé créé pour ma
                           chaîne YouTube a vraiment fait la différence. Les gens
@@ -936,7 +1099,7 @@
                     <div class="testify">
                       <div class="testify__struct">
                         <div class="name">Sarah</div>
-                        <img src="images/stars.svg" alt="stars" class="stars" />
+                        <img  src="images/stars.svg" alt="stars" class="stars" />
                         <div class="description">
                           "Je voulais juste dire un grand merci pour la
                           miniature YouTube incroyable que vous avez créée pour
@@ -994,8 +1157,7 @@
                     Contactez-nous dès aujourd'hui pour commencer votre projet
                     et donnez un coup de pouce à votre présence en ligne. -->
 
-                    <img src="images/started.png" alt="">
-
+                    <img class="lazy"  src="images/started.png" alt="" />
                   </div>
                 </div>
 
@@ -1005,7 +1167,7 @@
                     <div class="text">Remplissez vos informations</div>
                   </div>
 
-                  <form id="form_contact" class="form_contain" method="post" >
+                  <form id="form_contact" class="form_contain" method="post">
                     <input
                       required
                       type="text"
@@ -1015,22 +1177,37 @@
                     />
 
                     <select required name="service" id="service">
-                      <option contenu="SERVICES1" value="Formations et Coaching de chaine youtube">
+                      <option
+                        contenu="SERVICES1"
+                        value="Formations et Coaching de chaine youtube"
+                      >
                         Formations et Coaching de chaine youtube
                       </option>
                       <option contenu="SERVICESPaypal" value="Retraits Paypal">
                         Retraits Paypal
                       </option>
-                      <option contenu="SERVICES2" value="Création des miniatures YouTube">
+                      <option
+                        contenu="SERVICES2"
+                        value="Création des miniatures YouTube"
+                      >
                         Création des miniatures YouTube
                       </option>
-                      <option contenu="SERVICES3" value="Montage des vidéos YouTube">
+                      <option
+                        contenu="SERVICES3"
+                        value="Montage des vidéos YouTube"
+                      >
                         Montage des vidéos YouTube
                       </option>
-                      <option contenu="SERVICES4" value="Création des boutons like et s'abonner">
+                      <option
+                        contenu="SERVICES4"
+                        value="Création des boutons like et s'abonner"
+                      >
                         Création des boutons like et s'abonner
                       </option>
-                      <option contenu="SERVICES5" value="Création des sites web sur mesure">
+                      <option
+                        contenu="SERVICES5"
+                        value="Création des sites web sur mesure"
+                      >
                         Création des sites web sur mesure
                       </option>
                     </select>
@@ -1061,14 +1238,10 @@
                       placeholder="Taper votre commentaire"
                     ></textarea>
 
-                    <div class="war_add_sendContact">
-
-                    </div>
+                    <div class="war_add_sendContact"></div>
 
                     <div class="btn_contain">
-                      <div id="submitForm"  class="btn_gen">
-                        Envoyez
-                      </div>
+                      <div id="submitForm" class="btn_gen">Envoyez</div>
                     </div>
                   </form>
                 </div>
@@ -1092,7 +1265,7 @@
                 />
 
                 <div class="contacts">
-                 <!-- <a class="contact" href="tel:+32466419174"
+                  <!-- <a class="contact" href="tel:+32466419174"
                     >+32 466 41 91 74</a
                   > -->
                   <a class="contact" href="mailto:bedjigui@gmail.com"
@@ -1112,7 +1285,7 @@
 
             <div class="footer__struct">
               <div class="line">
-                <img src="images/tree_footer.svg" alt="" class="tree_footer" />
+                <img class="lazy"  src="images/tree_footer.svg" alt="" class="tree_footer" />
 
                 <div class="footer_end">
                   <div class="sign">
@@ -1147,11 +1320,10 @@
           </footer>
         </div>
       </div>
-   
-    
     </main>
 
     <div class="noise"></div>
+    <!-- <div class="noise noise_none"></div> -->
     <script src="https://cdn.jsdelivr.net/npm/google-libphonenumber@3/dist/libphonenumber.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -1164,7 +1336,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="text/javascript" src="js/main.js?v=6"></script>
   </body>
 </html>

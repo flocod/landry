@@ -499,7 +499,7 @@ a :hover {
 }
 @media all and (max-width: 1000px) {
   .about__text {
-    margin-top: 50px;
+    margin-top: 0px;
     width: 100%;
   }
 }
@@ -1696,7 +1696,7 @@ a :hover {
 }
 
 @media all and (max-width: 700px) {
-  .noise {
+  .noise_none {
     display: none !important;
   }
 }
@@ -1917,6 +1917,11 @@ a :hover {
 .carousel__struct__text .text1 span {
   color: var(--cta);
 }
+@media all and (max-width: 500px) {
+  .carousel__struct__text .text1 span {
+    font: normal normal 600 1.5em/1em var(--big0);
+  }
+}
 @media all and (max-width: 1300px) {
   .carousel__struct__text .text1 {
     font: normal normal 600 5em/1em var(--big0);
@@ -2020,12 +2025,14 @@ a :hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.carousel__struct__image {
-  width: 37vw;
-  height: calc(70vh - var(--header_h));
+.carousel__struct .border_image {
   border: 3px solid var(--text);
   -webkit-box-shadow: 10px 10px 0px var(--text);
           box-shadow: 10px 10px 0px var(--text);
+}
+.carousel__struct__image {
+  width: 37vw;
+  height: calc(70vh - var(--header_h));
   opacity: 1;
 }
 @media all and (max-width: 1300px) {

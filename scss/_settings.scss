@@ -454,7 +454,7 @@ a {
     display: block;
     width: 45%;
     @media all and (max-width: 1000px) {
-      margin-top: 50px;
+      margin-top: 0px;
       width: 100%;
     }
     .text1 {
@@ -1526,7 +1526,7 @@ a {
   animation: noise 1s steps(2) infinite;
 }
 @media all and (max-width: 700px) {
-  .noise {
+  .noise_none {
     display: none !important;
   }
 }

@@ -112,6 +112,10 @@
           color: var(--text);
           span {
             color: var(--cta);
+            // text-transform: uppercase;
+           @media all and (max-width:500px){
+            font: normal normal 600 1.5em/1em var(--big0);
+           }
           }
   
           @media  all and (max-width:  1300px) {
@@ -203,12 +207,16 @@
           }
         }
       }
+
+      .border_image{
+        border: 3px solid var(--text);
+        box-shadow: 10px 10px 0px var(--text);
+      }
   
       &__image {
         width: 37vw;
         height: calc(70vh - var(--header_h));
-        border: 3px solid var(--text);
-        box-shadow: 10px 10px 0px var(--text);
+
         opacity: 1;
   
         @media  all and (max-width:  1300px) {
