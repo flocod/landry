@@ -76,6 +76,20 @@ Black 900
           align-items: center;
 }
 
+img[data-src] {
+  -webkit-filter: blur(0.2em);
+          filter: blur(0.2em);
+}
+
+img {
+  -webkit-filter: blur(0em);
+          filter: blur(0em);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;

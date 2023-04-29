@@ -39,29 +39,78 @@ function loader_percentage() {
 
 // loader_percentage();
 
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+// document.addEventListener("DOMContentLoaded", function() {
+//   var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target;
-          lazyImage.src = lazyImage.src;
-          lazyImage.srcset = lazyImage.src;
-          lazyImage.classList.remove("lazy");
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
+//   if ("IntersectionObserver" in window) {
+//     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+//       entries.forEach(function(entry) {
+//         if (entry.isIntersecting) {
+//           let lazyImage = entry.target;
+//           lazyImage.src = lazyImage.src;
+//           lazyImage.srcset = lazyImage.src;
+//           lazyImage.classList.remove("lazy");
+//           lazyImageObserver.unobserve(lazyImage);
+//         }
+//       });
+//     });
 
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
+//     lazyImages.forEach(function(lazyImage) {
+//       lazyImageObserver.observe(lazyImage);
+//     });
+//   } else {
+//     // Possibly fall back to event handlers here
+//   }
+// });
+
+
+
+
+
+
+// Progressive loading images
+const imagesToLoad = document.querySelectorAll("img[data-src]");
+const loadImages = (image) => {
+  image.setAttribute("src", image.getAttribute("data-src"));
+  image.onload = () => {
+    image.removeAttribute("data-src");
+  };
+};
+
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((items) => {
+    // console.log("items----------->", items);
+    items.forEach((item) => {
+      if (item.isIntersecting) {
+        loadImages(item.target);
+        observer.unobserve(item.target);
+      }
     });
-  } else {
-    // Possibly fall back to event handlers here
-  }
-});
+  });
+  imagesToLoad.forEach((img) => {
+    observer.observe(img);
+  });
+} else {
+  imagesToLoad.forEach((img) => {
+    loadImages(img);
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const addActiveClass = (elts) => {
   const elements = document.querySelectorAll(elts);
