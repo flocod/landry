@@ -1268,10 +1268,15 @@ a :hover {
 }
 .temoignage__container__struct .work {
   height: auto !important;
+  width: 30%;
 }
 .temoignage__container__struct .work .testify__struct {
   width: 100% !important;
   margin-top: 0px;
+}
+.temoignage__container .flex_wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .temoignage__container .no_swipe_struct {
   width: 100%;
