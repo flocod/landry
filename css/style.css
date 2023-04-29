@@ -79,6 +79,10 @@ Black 900
 img[data-src] {
   -webkit-filter: blur(0.2em);
           filter: blur(0.2em);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
 }
 
 img {
